@@ -61,6 +61,37 @@ $mergeData = $mergeRequest->run();
 
 以上配置项都支持模板变量
 
+### 事件
+
+- `executing` : 发起模拟请求时触发
+  
+  参数: 
+  - `$key`: 生成规则的 key
+  - `&$mergeData` : 该请求之前已请求到的数据
+
+- `executed` : 发起模拟请求之后触发
+  
+  参数: 
+  - `$res` : 该请求返回的数据
+  - `$key`: 生成规则的 key
+  - `&$mergeData` : 该请求之前已请求到的数据
+
+- `loaded` : 所有模拟请求结束后触发
+  
+  参数: 
+    -  `&$mergeData` : 所有模拟请求返回的数据
+
+示例
+```php
+class Observer{
+    public function executing($key, $mergeData){}
+    public function executed($res, $key, $mergeData){}
+    public function loaded($mergeData){}
+}
+
+//绑定
+$mr->observer(Observer::class);
+```
 ### 模板变量
 
 `${mr:key.res.data}`
