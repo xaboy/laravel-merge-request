@@ -1,0 +1,29 @@
+{
+  "name": "xaboy/laravel-merge-request",
+  "description": "laravel 根据路由规则合并请求",
+  "license": "MIT",
+  "keywords": [
+    "request",
+    "laravel"
+  ],
+  "homepage": "https://github.com/xaboy/laravel-merge-request",
+  "authors": [
+    {
+      "name": "xaboy",
+      "email": "xaboy2005@qq.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Xaboy\\MergeRequest": "./src/"
+    }
+  },
+  "support": {
+    "issues": "https://github.com/xaboy/laravel-merge-request/issues",
+    "source": "https://github.com/xaboy/laravel-merge-request"
+  },
+  "require": {
+    "php": ">=7.0",
+    "laravel/framework": ">=5.5.0"
+  }
+}
