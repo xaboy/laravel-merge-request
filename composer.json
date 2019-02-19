@@ -1,6 +1,6 @@
 {
   "name": "xaboy/laravel-merge-request",
-  "description": "laravel 根据路由规则合并请求",
+  "description": "laravel框架 根据路由规则创建/发起虚拟请求,可以在当前请求中发起多个虚拟请求",
   "license": "MIT",
   "keywords": [
     "request",
