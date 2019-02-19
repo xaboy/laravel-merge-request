@@ -90,7 +90,7 @@ class Observer{
 }
 
 //绑定
-$mr->observer(Observer::class);
+$mergeRequest->observer(Observer::class);
 ```
 ### 模板变量
 
