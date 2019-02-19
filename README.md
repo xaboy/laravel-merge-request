@@ -12,10 +12,12 @@ laravel框架 根据路由规则创建/发起虚拟请求,可以在当前请求�
 路由规则
 ```php
 //获取验证码
-Route::get('captcha', 'AuthController@captcha'); 
+Route::get('captcha', 'AuthController@captcha');
+ 
 //登录并返回用户id
 //例: [user_id=>1]
 Route::post('login','AuthController@login'); 
+
 //根据用户id获取用户信息
 Route::get('user/info/{id}','AuthController@userInfo'); 
 ```
@@ -42,7 +44,7 @@ $mergeRequest = new MergeRequest([
     ]
 ])
 ```
-发起请求
+发起虚拟请求
 ```php
 $mergeData = $mergeRequest->run();
 ```
